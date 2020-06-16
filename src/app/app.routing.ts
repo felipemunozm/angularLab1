@@ -2,7 +2,7 @@ import {ModuleWithProviders} from '@angular/core'
 import {Routes, RouterModule} from '@angular/router'
 
 //COmponentes
-import {TiendaComponent} from './components/tienda/tienda.component'
+import {TiendaComponent} from './tienda/tienda.component'
 
 const appRoutes: Routes = [
     {path: '', component: TiendaComponent},
