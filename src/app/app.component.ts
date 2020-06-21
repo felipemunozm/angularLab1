@@ -8,7 +8,7 @@ import { getAttrsForDirectiveMatching } from '@angular/compiler/src/render3/view
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements DoCheck, OnInit {
-  title = 'Requetecurso de Angular UDEMY';
+  title = 'ZOO Angular UDEMY';
   emailContacto: string;
   ngDoCheck() {
     //console.log("doCheck en ejecucion desde appRoot")
