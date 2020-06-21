@@ -7,6 +7,10 @@
 <a [routerLink]="['/cuidadores']">Cuidadores</a>
 <a [routerLink]="['/tienda']">Tienda</a>
 <a [routerLink]="['/contacto']">Contacto</a>
+<br />
+<span *ngIf="emailContacto">{{emailContacto}}<button (click)="borrarEmail()">Eliminar email de contacto</button></span>
+
+
 <hr />
 <!-- <div>
     <tienda></tienda>
