@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   title = "Panel de Administración"
+
   constructor() { }
 
   ngOnInit(): void {
