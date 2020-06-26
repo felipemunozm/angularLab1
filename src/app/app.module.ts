@@ -15,6 +15,7 @@ import { KeeperComponent } from './components/keeper/keeper.component';
 import { ErrorComponent } from './components/error/error.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ModuloemailModule } from './moduloemail/moduloemail.module'
+import { AdminModule } from './admin/admin.module'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ModuloemailModule } from './moduloemail/moduloemail.module'
     AppRoutingModule,
     EditorModule,
     ModuloemailModule,
+    AdminModule,
     FormsModule
   ],
   providers: [],
