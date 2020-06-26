@@ -17,5 +17,6 @@ export class GuardarEmailComponent implements OnInit {
 
   guardarEmail() {
     localStorage.setItem('emailContacto', this.emailContacto)
+    this.emailContacto = null;
   }
 }

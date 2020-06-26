@@ -1,1 +1,5 @@
-<h2>{{title}}</h2>>
+<div *ngIf="emailContacto">
+    <h4>{{title}}</h4>
+    <p>Email contacto: {{emailContacto}}</p>
+    <button (click)="borrarEmail()">Borrar email</button>
+</div>
