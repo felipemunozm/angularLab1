@@ -1,15 +1,16 @@
-import {Component} from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+
 @Component({
 
     selector: 'tienda',
     templateUrl: './tienda.component.html',
     styleUrls: ['./tienda.component.css']
 })
-export class TiendaComponent {
+export class TiendaComponent implements OnInit {
     public titulo;
     public nombreDelParque: string
     public miParque
-    constructor(){
+    constructor() {
         this.titulo = "Esta es la tienda"
     }
     mostrarNombre() {
@@ -18,5 +19,15 @@ export class TiendaComponent {
     verDatosParque(event) {
         console.log(event)
         this.miParque = event
+    }
+    ngOnInit() {
+        $('#textoJQ').hide()
+        $('#botonJQ').click(() => {
+            $('#textoJQ').slideToggle()
+        })
+        $('#cajaChica').dotdotdot()
+    }
+    keyupHandler(event) {
+        console.log(event)
     }
 }

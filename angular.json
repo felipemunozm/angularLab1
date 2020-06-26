@@ -20,6 +20,11 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "node_modules/tinymce",
+                "output": "/tinymce/"
+              },
               "src/assets"
             ],
             "styles": [
@@ -28,7 +33,9 @@
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/jquery-dotdotdot/src/jquery.dotdotdot.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/tinymce/tinymce.min.js"
             ]
           },
           "configurations": {

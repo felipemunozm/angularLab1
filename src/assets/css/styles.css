@@ -1,3 +1,14 @@
-body {
+.navbar {
     background: #eee !important;
+}
+
+.jumbotron {
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 1px #ccc;
+}
+
+.nav-item .active {
+    border-bottom: 3px solid orange;
 }
