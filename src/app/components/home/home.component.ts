@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { fundido } from '../../animation'
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [fundido]
 })
 export class HomeComponent implements OnInit {
 

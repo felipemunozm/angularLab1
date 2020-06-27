@@ -16,6 +16,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ModuloemailModule } from './moduloemail/moduloemail.module'
 import { AdminModule } from './admin/admin.module'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AdminModule } from './admin/admin.module'
     EditorModule,
     ModuloemailModule,
     AdminModule,
+    BrowserAnimationsModule,
     FormsModule
   ],
   providers: [],

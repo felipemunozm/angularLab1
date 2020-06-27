@@ -1,54 +1,75 @@
-<h4>Utilizar JQuery dentro de Angular</h4>
-<button id="botonJQ">Mostrar Texto</button>
-<p id="textoJQ" class="alert alert-warning ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum
-    has been the
-    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-    to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-    versions of Lorem Ipsum.</p>
-<div id="cajaChica" style="border:1px solid black; width:150px; height:50px">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum
-    has been the
-    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-    to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-    versions of Lorem Ipsum.
-</div>
-<hr />
-<editor onkeyup="keyupHandler($event)" [init]="{
-}"></editor>
-<hr />
-Padre:
-<h1>{{titulo}}</h1>
-<ul>
-    <li>Camiseta rosa</li>
-    <li>Gorra Negra</li>
-</ul>
+<div class="container-fluid" [@fadeIn]>
+    <a class="boton_activo btn btn-success" [@marcar]="status" (click)="cambiarEstado(status)">
+        <span *ngIf="status == 'inactive'">Boton Inactivo</span>
+        <span *ngIf="status == 'active'">Boton Activo</span>
+    </a>
+    <hr />
+    <h4>Animaciones CSS3</h4>
+    <button class="boton_transiciones">Transiciones</button>
+    <div class="clearfix"></div>
+    <div class="caja_animada">
 
-<hr />
-<p>
-    Nombre del parque:
-    <input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
-</p>
-<p>Resultado: {{nombreDelParque}}</p>
-<div *ngIf="miParque">
-    <h4>Datos de miParque desde el Hijo</h4>
-    <ol>
-        <li>{{miParque.nombre}}</li>
-        <li>{{miParque.metros}}</li>
-        <li>{{miParque.vegetacion}}</li>
-        <li>{{miParque.abierto}}</li>
-    </ol>
+    </div>
+    <h4>Utilizar JQuery dentro de Angular</h4>
+    <button id="botonJQ">Mostrar Texto</button>
+    <p id="textoJQ" class="alert alert-warning ">Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+        Lorem Ipsum
+        has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+        it
+        to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+        sheets
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+        including
+        versions of Lorem Ipsum.</p>
+    <div id="cajaChica" style="border:1px solid black; width:150px; height:50px">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum
+        has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+        it
+        to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+        sheets
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+        including
+        versions of Lorem Ipsum.
+    </div>
+    <hr />
+    <editor onkeyup="keyupHandler($event)" [init]="{
+}"></editor>
+    <hr />
+    Padre:
+    <h1>{{titulo}}</h1>
+    <ul>
+        <li>Camiseta rosa</li>
+        <li>Gorra Negra</li>
+    </ul>
+
+    <hr />
+    <p>
+        Nombre del parque:
+        <input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
+    </p>
+    <p>Resultado: {{nombreDelParque}}</p>
+    <div *ngIf="miParque">
+        <h4>Datos de miParque desde el Hijo</h4>
+        <ol>
+            <li>{{miParque.nombre}}</li>
+            <li>{{miParque.metros}}</li>
+            <li>{{miParque.vegetacion}}</li>
+            <li>{{miParque.abierto}}</li>
+        </ol>
+    </div>
+    <hr />
+    <parques [nombre]="'Parque en duro, osea como palo! jajajajaja'" [metros_cuadrados]="986735233"
+        (pasameLosDatos)="verDatosParque($event)"></parques>
+    <hr />
+    <p *ngIf="nombreDelParque">
+        Hijo:
+        <parques [nombre]="nombreDelParque" [metros_cuadrados]="123" (pasameLosDatos)="verDatosParque($event)">
+        </parques>
+    </p>
 </div>
-<hr />
-<parques [nombre]="'Parque en duro, osea como palo! jajajajaja'" [metros_cuadrados]="986735233"
-    (pasameLosDatos)="verDatosParque($event)"></parques>
-<hr />
-<p *ngIf="nombreDelParque">
-    Hijo:
-    <parques [nombre]="nombreDelParque" [metros_cuadrados]="123" (pasameLosDatos)="verDatosParque($event)"></parques>
-</p>
