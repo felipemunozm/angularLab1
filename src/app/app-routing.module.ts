@@ -8,6 +8,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
 import { ErrorComponent } from './components/error/error.component'
+import { LoginComponent } from './components/login/login.component'
+import { RegisterComponent } from './components/register/register.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'contacto', component: ContactComponent },
   { path: 'cuidadores', component: KeeperComponent },
   { path: 'tienda', component: TiendaComponent },
-  //  { path: '**', component: ErrorComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegisterComponent },
+  { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({
