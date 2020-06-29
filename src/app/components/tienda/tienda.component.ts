@@ -46,7 +46,7 @@ export class TiendaComponent implements OnInit {
         $('#botonJQ').click(() => {
             $('#textoJQ').slideToggle()
         })
-        $('#cajaChica').dotdotdot()
+        //$('#cajaChica').dotdotdot()
         this.status = 'inactive'
     }
     keyupHandler(event) {
