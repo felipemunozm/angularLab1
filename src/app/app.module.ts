@@ -19,7 +19,8 @@ import { ModuloemailModule } from './moduloemail/moduloemail.module'
 import { AdminModule } from './admin/admin.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component'
+import { RegisterComponent } from './components/register/register.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RegisterComponent } from './components/register/register.component'
     KeeperComponent,
     ErrorComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

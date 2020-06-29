@@ -31,6 +31,10 @@ export class UserService {
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' })
     return this.httpClient.post<User>(this.url + 'login', loginUser, { headers: headers })
   }
+  updateUser(updateUser) {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': this.getToken() })
+    return this.httpClient.put<User>(this.url + 'update-user/' + this.identity._id, updateUser, { headers })
+  }
 
   getIdentity() {
     let identity = JSON.parse(localStorage.getItem('identity'))
@@ -43,7 +47,7 @@ export class UserService {
     return this.identity
   }
   getToken() {
-    let token = JSON.parse(localStorage.getItem('token'))
+    let token = localStorage.getItem('token')
     if (token != undefined) {
       this.token = token
     }
